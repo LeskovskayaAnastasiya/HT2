@@ -7,12 +7,12 @@ import org.testng.annotations.*;
 
 import java.util.Arrays;
 
-public class SampleTest_with_PageObjectSample {
+public class Tests {
 
 	String base_url = "http://localhost:8081/";
 	StringBuffer verificationErrors = new StringBuffer();
 	WebDriver driver = null;
-	PageObjectSample page;
+	JenkinsManager page;
 
 
 	@BeforeClass
@@ -36,7 +36,7 @@ public class SampleTest_with_PageObjectSample {
 	public void beforeTest() {
 		driver.get(base_url);
 		System.out.println(driver.getTitle());
-		page = PageFactory.initElements(driver, PageObjectSample.class);
+		page = PageFactory.initElements(driver, JenkinsManager.class);
 		Assert.assertTrue(page.getFormForLogin(), "Form  is not founded");
 		page.setName("LeskovskayaAnastasia");
 		Assert.assertEquals(page.getName(), "LeskovskayaAnastasia", "Unable to fill 'User' field");

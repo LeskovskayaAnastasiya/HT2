@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 
-public class PageObjectSample {
+public class JenkinsManager {
 
     private WebDriverWait wait;
     private final WebDriver driver;
@@ -76,7 +76,7 @@ public class PageObjectSample {
 
 
 
-    public PageObjectSample(WebDriver driver) {
+    public JenkinsManager(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(this.driver, 30);
 
@@ -89,67 +89,67 @@ public class PageObjectSample {
 
 
     // Заполнение имени.
-    public PageObjectSample setName(String value) {
+    public JenkinsManager setName(String value) {
         j_username.sendKeys(value);
         return this;
     }
 
     // Заполнение пароля
-    public PageObjectSample setPassword(String value) {
+    public JenkinsManager setPassword(String value) {
         password.sendKeys(value);
         return this;
     }
 
     // заполнение формы данными
-    public PageObjectSample setNameUserCreateForm(String value) {
+    public JenkinsManager setNameUserCreateForm(String value) {
         username.sendKeys(value);
         return this;
     }
 
-    public PageObjectSample setPasswordUserCreateForm(String value) {
+    public JenkinsManager setPasswordUserCreateForm(String value) {
         passwordUserCrateForm.sendKeys(value);
         return this;
     }
 
-    public PageObjectSample setConfirmPasswordUserCreateForm(String value) {
+    public JenkinsManager setConfirmPasswordUserCreateForm(String value) {
         confirmPassword.sendKeys(value);
         return this;
     }
 
-    public PageObjectSample setFullNameUserCreateForm(String value) {
+    public JenkinsManager setFullNameUserCreateForm(String value) {
         fullName.sendKeys(value);
         return this;
     }
 
-    public PageObjectSample setEmailAddressUserCreateForm(String value) {
+    public JenkinsManager setEmailAddressUserCreateForm(String value) {
         eMailAddress.sendKeys(value);
         return this;
     }
 
     //Отправка данных из формы.
-    public PageObjectSample submitForm() {
+    public JenkinsManager submitForm() {
         logInButton.click();
         return this;
     }
 
-    public PageObjectSample createUserButtonClick() {
+    public JenkinsManager createUserButtonClick() {
         createUserButton.click();
         return this;
     }
 
-    public PageObjectSample deleteUserClick() {
+    public JenkinsManager deleteUserClick() {
         deleteUser.click();
         return this;
     }
 
-    public PageObjectSample  yesButtonClick() {
+    public JenkinsManager yesButtonClick() {
         yesButton.click();
         return this;
     }
 
     //методы перехода по ссылкам
     //переход по ссылке «Manage Jenkins»
-    public PageObjectSample goManageJenkinsLink() {
+    public JenkinsManager goManageJenkinsLink() {
         manageJenkinsLink.click();
         return this;
     }
@@ -164,7 +164,7 @@ public class PageObjectSample {
 
 
     // переход по ссылке Manage Users
-    public PageObjectSample goManageUsersLink() {
+    public JenkinsManager goManageUsersLink() {
         manageUsersLink.click();
         return this;
     }
@@ -181,7 +181,7 @@ public class PageObjectSample {
     }
 
     //переход по ссылке CreateUser
-    public PageObjectSample goCreateUserLink() {
+    public JenkinsManager goCreateUserLink() {
         driver.findElement(By.xpath("//a[@href='addUser']")).click();
         return this;
     }
