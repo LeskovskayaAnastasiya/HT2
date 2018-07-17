@@ -61,7 +61,6 @@ public class JenkinsManager {
     private WebElement yesButton;
 
     @FindBy(xpath = " //*[@id=\"people\"]/tbody/tr/td")
-    //@FindBy(xpath = " //td")
     private WebElement table;
 
     @FindBy(xpath = "//a[@title='Manage Users']/dl/dt")
